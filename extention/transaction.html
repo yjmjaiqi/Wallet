@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ajax Template Rendering</title>
+</head>
+<script type="text/javascript" src="transaction.js"></script>
+<body style="width: 500px;">
+  <button><a href="index_bootstrap.html">return</a></button>
+  <div>交易数量：<input type="text" readonly id="count"></div>
+  <div id="target-element"></div>
+
+  <!-- <script>
+    // 创建XMLHttpRequest对象
+    var xhr = new XMLHttpRequest();
+
+    // 设置请求的类型、URL和异步标志
+    xhr.open('GET', 'http://localhost:5000/historyTransaction', true);
+
+    // 注册请求加载完成的事件处理程序
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // 在请求成功后进行模板渲染
+        renderTemplate(JSON.parse(xhr.responseText));
+      } else {
+        console.error('Error:', xhr.statusText);
+      }
+    };
+
+    // 注册请求错误的事件处理程序
+    xhr.onerror = function() {
+      console.error('Request failed');
+    };
+
+    // 发送Ajax请求
+    xhr.send();
+
+    function renderTemplate(data) {
+        console.log(data.transactions);
+      // 创建模板字符串
+      var template = '';
+
+      // 遍历数据数组，生成模板字符串
+      for (var i = 0; i < data.length; i++) {
+        template += '<h5>发送方' + data.transactions[i].sender_blockchain_address + '</h5><h5>接收方' + data.transactions[i].recipient_blockchain_address
+        + '</h5>'+'<h5>交易值' + data.transactions[i].value + '</h5><h5>交易哈希' + data.transactions[i].transactionHash+ '</h5>'+'<hr/>';
+      }
+
+      // 将渲染后的模板插入到目标元素中
+      document.getElementById('target-element').innerHTML = template;
+    }
+  </script> -->
+</body>
+</html>

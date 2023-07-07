@@ -1,0 +1,37 @@
+获取交易池交易get：http://127.0.0.1:5000/transactions
+新建钱包post:http://127.0.0.1:8080/wallet
+添加签名交易post：http://127.0.0.1:5000/transactions
+{
+    "sender_blockchain_address":"4vofrMjMzH11Vo86C3wJdNY5xB73ScKVF8onoPBfxesW",
+    "recipient_blockchain_address":"yjm",
+    "sender_public_key":"d25235fa8dee6a938bc65dd2b21cfba380d947e907eb92d135f8d4555d19d9b8af5bae94f639b6ca0177ce8150269f665de65e32f1e4d0e12a2d8895f028ee1d",
+    "value":9,
+    "signature":"250633df7cfaba6f4f4bb0b02139af15646008f5cc19e7e65b55adf458e38eaead96dcb54ea7ed5d0f138cf1ea4b0b6ea073cd840846a9c4c14a657ae31c03ec"
+}
+挖矿get：http://127.0.0.1:5000/mine/start
+账户余额post：http://127.0.0.1:5000/amount
+{
+    "blockchain_address":"bbb"
+}
+初始化区块链和奖励地址get：http://127.0.0.1:5000/
+根据区块号查询区块post：http://127.0.0.1:5000/blockNumber
+{
+    "block_number":1
+}
+根据区块哈希查询区块post：http://127.0.0.1:5000/blockHash
+{
+    "block_hash":"a36cfce41a42ca1e61b66372b37d70df7556c38b23a982c5de60d72b794ad294"
+}
+添加无签名交易post：http://127.0.0.1:8080/transaction
+{
+    "sender_blockchain_address":"4vofrMjMzH11Vo86C3wJdNY5xB73ScKVF8onoPBfxesW",
+    "recipient_blockchain_address":"bbb",
+    "sender_public_key":"d25235fa8dee6a938bc65dd2b21cfba380d947e907eb92d135f8d4555d19d9b8af5bae94f639b6ca0177ce8150269f665de65e32f1e4d0e12a2d8895f028ee1d",
+    "sender_private_key":"90d7658cb8c1bac1ddba6246729a5af42c5962e0a3d703c1c00509046b1e108a",
+    "value":"9"
+}
+根据交易哈希查询交易post:http://localhost:5000/getTransactionHash
+{
+    "transaction_hash":"973773e932fe1532d94fe58afd7443ab46ed25785f3338c5022fa66a77751fb1"
+}
+查询历史交易get:http://localhost:5000/historyTransaction

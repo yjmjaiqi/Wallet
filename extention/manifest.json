@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "HELLO YJM Chrom Extension",
+    "version": "1.0",
+    "browser_action": {
+        "default_popup": "index_bootstrap.html",
+        "default_icon": "1.png" 
+    },
+    "permissions": ["activeTab"]
+    
+} 
